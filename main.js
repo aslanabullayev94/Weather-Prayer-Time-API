@@ -36,7 +36,7 @@ async function fetchWeatherPrayer(city) {
         let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c5a26cad9228e2350414709036207c06`);
         let data = await req.json();
 
-        let reqPrayer = await fetch(`http://api.aladhan.com/v1/timingsByCity?city=${city}&country=United Arab Emirates&method=0`);
+        let reqPrayer = await fetch(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=United Arab Emirates&method=0`);
         let dataPrayer = await reqPrayer.json();
 
         if (city.includes(" ")) {
@@ -68,7 +68,7 @@ function addDataToDOM(data, dataPrayer) {
 
     // Displaying Weather Icon
     let iconcode = data.weather[0].icon;
-    let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    let iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     weatherIconEl.src = iconurl;
 
     // Displaying Wind
