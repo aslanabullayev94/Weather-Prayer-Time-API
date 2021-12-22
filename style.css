@@ -1,0 +1,232 @@
+* {
+  font-family: "Nunito", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.bg-image-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-image: url(images/bg-img.jpg);
+  background-size: 1366px 786px;
+  background-repeat: no-repeat;
+}
+
+.search-bar {
+  opacity: 0.8;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 50px;
+  width: 390px;
+  border-radius: 12px;
+  background-color: black;
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.search-bar input {
+  width: 250px;
+  height: 25px;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: inherit;
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  padding: 7px 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.search-bar button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#statistics {
+  line-height: 1.5;
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  height: 130px;
+  width: 500px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 45px black;
+          box-shadow: 0 0 45px black;
+  background-color: teal;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+#statistics .first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  height: 50px;
+}
+
+#statistics .first-row .city-name {
+  font-size: 26px;
+}
+
+#statistics .first-row .temp-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#statistics .second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#statistics .second-row .sky {
+  text-transform: capitalize;
+}
+
+#statistics.opac {
+  opacity: 0.9;
+}
+
+#prayer {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  height: 35px;
+  width: 750px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 45px black;
+          box-shadow: 0 0 45px black;
+  background-color: teal;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  line-height: 35px;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+#prayer.opac2 {
+  opacity: 0.9;
+}
+
+#prayer .prayer-detail {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 728px) {
+  body {
+    width: 100%;
+  }
+  .bg-image-container {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    background-image: url(images/bg-img.jpg);
+    background-size: cover !important;
+  }
+  .search-bar {
+    top: 30%;
+    width: 300px;
+    padding: 0 5px;
+    gap: 0;
+  }
+  .search-bar input {
+    width: 210px;
+  }
+  .search-bar button {
+    padding: 7px 15px;
+  }
+  #statistics {
+    top: 50%;
+    width: 300px;
+    height: 160px;
+  }
+  #prayer {
+    top: 80%;
+    width: 330px;
+    height: 120px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
